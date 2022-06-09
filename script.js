@@ -10,7 +10,10 @@ let termElement = document.querySelector("#search-input");
 let resultsElement = document.querySelector("#movies-grid");
 let searchElement = document.querySelector("#clicker");
 let moreResultsButtonElement = document.querySelector("#load-more-movies-btn");
+let titleElement = document.querySelector("#flixster-title");
+let nowPlayingElement = document.querySelector(".now-playing");
 
+titleElement.addEventListener("click", loadNowPlaying);
 formContentElement.addEventListener("submit", handleFormSubmit);
 moreResultsButtonElement.addEventListener("click", showMore);
 window.addEventListener("load", loadNowPlaying);
@@ -73,6 +76,7 @@ async function handleFormSubmit(e) {
   currentPageNum = 0;
   // Remove gifs from page
   resultsElement.innerHTML = "";
+  nowPlayingElement.innerHTML = " ";
   moreResultsButtonElement.classList.add("hidden");
 
   const searchTerm = e.target.name.value;
@@ -80,8 +84,6 @@ async function handleFormSubmit(e) {
 
   const data = await getResults(searchTerm);
 
-  //   displayResults(data);
-  //   const data = await getNowPlaying();
   displayResults(data);
   // Unhide show more button
   moreResultsButtonElement.classList.remove("hidden");
