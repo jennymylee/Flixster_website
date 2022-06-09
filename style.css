@@ -1,1 +1,98 @@
+.now-playing {
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 20px 0px 20px 20px;
+  font-weight: bold;
+  font-size: larger;
+}
 
+body {
+  background-color: rgb(21, 14, 61);
+}
+
+h1 {
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+.material-icons {
+  color: white;
+  width: 35px;
+}
+.movie-votes {
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 20px;
+}
+
+.movie-title {
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-weight: bold;
+  font-size: large;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.results {
+  display: grid;
+
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border-color: antiquewhite;
+  border-width: 5px;
+  grid-gap: 30px;
+  /* flex-direction: column;
+    /* display: flex; */
+
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+label {
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form,
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#clicker,
+#more-res,
+input {
+  border-style: none;
+  font-weight: bolder;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.form-content {
+  margin: 5px;
+}
