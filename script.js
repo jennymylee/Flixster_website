@@ -6,10 +6,10 @@ let currentPageNum = 0;
 let currentTerm = "";
 
 let formContentElement = document.querySelector(".form-content");
-let termElement = document.querySelector("#term");
-let resultsElement = document.querySelector(".results");
+let termElement = document.querySelector("#search-input");
+let resultsElement = document.querySelector("#movies-grid");
 let searchElement = document.querySelector("#clicker");
-let moreResultsButtonElement = document.querySelector(".more-results");
+let moreResultsButtonElement = document.querySelector("#load-more-movies-btn");
 
 formContentElement.addEventListener("submit", handleFormSubmit);
 moreResultsButtonElement.addEventListener("click", showMore);
@@ -45,9 +45,8 @@ function displayResults(res) {
     resultsElement.innerHTML += `
     <div class="movie-card">
         <img class="movie-poster" src="https://image.tmdb.org/t/p/original/${setOfMovies[i].poster_path}" alt='movie poster'>
-        
         <p class="movie-votes"><i class="material-icons">star</i>   ${setOfMovies[i].vote_average}</p>
-        <p class=movie-title>${setOfMovies[i].title}</p>
+        <p class="movie-title">${setOfMovies[i].title}</p>
     </div>`;
   });
 }

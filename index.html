@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Teko:700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div>
@@ -19,15 +23,15 @@
       <form action="" method="get" class="form-content">
         <div class="form-content">
           <label for="name">Search for a GIF: </label>
-          <input type="text" name="name" id="term" required />
+          <input type="text" name="name" id="search-input" required />
           <button type="submit" id="clicker">SEARCH</button>
         </div>
       </form>
     </div>
     <div class="now-playing">Now Playing</div>
-    <div class="results"></div>
+    <div id="movies-grid"></div>
     <div class="" button-div>
-      <button id="more-res" class="more-results hidden">
+      <button id="load-more-movies-btn" class="more-results hidden">
         LOAD MORE RESULTS
       </button>
     </div>
