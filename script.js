@@ -1,8 +1,8 @@
 const API_KEY = "31b3e44229c54504ec1d83b0923331c8";
-// const API_KEY = "nOjzgnRK5wSxGHruvjd3HVSux7Zxk46H";
-const LIMIT = 12;
-let currentPageNum = 0;
 
+const LIMIT = 12;
+
+let currentPageNum = 0;
 let currentTerm = "";
 
 let formContentElement = document.querySelector(".form-content");
@@ -10,10 +10,9 @@ let termElement = document.querySelector("#search-input");
 let resultsElement = document.querySelector("#movies-grid");
 let searchElement = document.querySelector("#clicker");
 let moreResultsButtonElement = document.querySelector("#load-more-movies-btn");
-let titleElement = document.querySelector("#flixster-title");
+
 let nowPlayingElement = document.querySelector(".now-playing");
 
-titleElement.addEventListener("click", loadNowPlaying);
 formContentElement.addEventListener("submit", handleFormSubmit);
 moreResultsButtonElement.addEventListener("click", showMore);
 window.addEventListener("load", loadNowPlaying);
@@ -69,7 +68,7 @@ async function showMore(e) {
 async function handleFormSubmit(e) {
   e.preventDefault();
   currentPageNum = 0;
-  // Remove gifs from page
+  // Remove movies from page
   resultsElement.innerHTML = "";
   nowPlayingElement.innerHTML = " ";
   moreResultsButtonElement.classList.add("hidden");
@@ -78,8 +77,8 @@ async function handleFormSubmit(e) {
   currentTerm = searchTerm;
 
   const data = await getResults(searchTerm);
-
   displayResults(data);
+
   // Unhide show more button
   moreResultsButtonElement.classList.remove("hidden");
   currentPageNum = 1;
