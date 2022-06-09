@@ -1,10 +1,8 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Week 1 Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: **Jenny Lee**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **5** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
@@ -36,7 +34,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 - [ ] Deploy website using GitHub Pages. 
 - [ ] Allow user to view more details about a movie within a popup.
-- [ ] Improve the user experience through CSS & animation.
+- [x] Improve the user experience through CSS & animation.
 - [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
 - [ ] Implement anything else that you can get done to improve the app functionality!
 
