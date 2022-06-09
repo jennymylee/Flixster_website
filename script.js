@@ -32,19 +32,16 @@ async function getNowPlaying() {
     `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`
   );
   const jsonResponse = await response.json();
-  console.log(jsonResponse.results);
+
   return jsonResponse;
 }
 
 function displayResults(res) {
   let offset = currentPageNum * LIMIT;
-  console.log("cpn:", currentPageNum);
-  console.log("offset:", offset);
 
   setOfMovies = res.results.slice(offset, offset + LIMIT);
 
   setOfMovies.forEach((movie, i) => {
-    console.log(setOfMovies[i].poster_path);
     resultsElement.innerHTML += `
     <div class="movie-card">
         <img class="movie-poster" src="https://image.tmdb.org/t/p/original/${setOfMovies[i].poster_path}" alt='movie poster'>
@@ -56,9 +53,7 @@ function displayResults(res) {
 
 async function showMore(e) {
   e.preventDefault();
-  console.log(currentTerm);
-  //   const data = await getResults(currentTerm);
-  //   displayResults(data);
+
   let data = "";
   if (currentTerm) {
     data = await getResults(currentTerm);
@@ -95,7 +90,7 @@ async function handleFormSubmit(e) {
 
 async function loadNowPlaying(e) {
   e.preventDefault();
-  console.log("onload");
+
   const data = await getNowPlaying();
   displayResults(data);
   moreResultsButtonElement.classList.remove("hidden");
