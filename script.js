@@ -1,6 +1,6 @@
 const API_KEY = "31b3e44229c54504ec1d83b0923331c8";
 // const API_KEY = "nOjzgnRK5wSxGHruvjd3HVSux7Zxk46H";
-const LIMIT = 9;
+const LIMIT = 12;
 let currentPageNum = 0;
 
 let currentTerm = "";
