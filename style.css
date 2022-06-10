@@ -1,3 +1,49 @@
+#overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: rgb(79, 77, 77);
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 100;
+}
+
+#popup {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  background: rgb(57, 55, 55);
+  width: 60%;
+  height: 80%;
+  z-index: 200;
+  overflow-y: scroll;
+}
+
+#popupclose {
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.popupcontent {
+  padding: 30px;
+}
+
+.movie-popup-title {
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.movie-popup-info {
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
 .now-playing {
   color: white;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -29,6 +75,11 @@ body {
   align-items: center;
   justify-items: center;
 }
+
+.movie-backdrop {
+  width: 100%;
+}
+
 h1 {
   margin: 0;
   padding-bottom: 6rem;
@@ -145,7 +196,8 @@ form {
   margin-right: 10px;
 }
 
-#load-more-movies-btn {
+#load-more-movies-btn,
+#back-to-top {
   border-style: none;
   font-weight: bolder;
   font-family: sans-serif;
@@ -154,7 +206,7 @@ form {
   background-color: #2d9da9;
   color: white;
   padding: 10px;
-  margin: 10px 0px 20px 0px;
+  margin: 10px 0px 5px 0px;
 }
 
 .form-content {
