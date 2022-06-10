@@ -165,6 +165,7 @@ async function handleFormSubmit(e) {
 
 async function loadNowPlaying(e) {
   e.preventDefault();
+  currentTerm = "";
   currentPageNum = 0;
   resultsElement.innerHTML = "";
   nowPlayingElement.classList.remove("hidden");
