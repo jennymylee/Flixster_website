@@ -21,6 +21,7 @@ let popup = document.getElementById("popup");
 let popUpContent = document.querySelector(".popupcontent");
 const body = document.querySelector("body");
 let backToTopElement = document.querySelector("#back-to-top");
+let searchingForElement = document.querySelector(".searching-for");
 
 formContentElement.addEventListener("submit", handleFormSubmit);
 moreResultsButtonElement.addEventListener("click", showMore);
@@ -141,8 +142,10 @@ async function handleFormSubmit(e) {
   resultsElement.innerHTML = "";
   nowPlayingElement.classList.add("hidden");
   moreResultsButtonElement.classList.add("hidden");
+  searchingForElement.classList.remove("hidden");
 
   const searchTerm = e.target.name.value;
+  searchingForElement.innerHTML = `Searching for "${searchTerm}"`;
   currentTerm = searchTerm;
 
   const data = await getResults(searchTerm);
@@ -161,6 +164,7 @@ async function loadNowPlaying(e) {
   currentPageNum = 0;
   resultsElement.innerHTML = "";
   nowPlayingElement.classList.remove("hidden");
+  searchingForElement.classList.add("hidden");
   const data = await getNowPlaying();
   displayResults(data);
   moreResultsButtonElement.classList.remove("hidden");
