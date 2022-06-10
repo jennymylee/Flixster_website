@@ -110,7 +110,7 @@ async function getMovieVideo(movieId) {
     `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}`
   );
   const jsonResponse = await response.json();
-  console.log(jsonResponse);
+
   return jsonResponse;
 }
 
@@ -119,7 +119,7 @@ async function getMovieDetails(movieId) {
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`
   );
   const jsonResponse = await response.json();
-  console.log(jsonResponse);
+
   return jsonResponse;
 }
 
