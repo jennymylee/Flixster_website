@@ -82,8 +82,6 @@ function displayResults(res) {
 
 async function popUp(src) {
   window.scrollTo(0, 0);
-  console.log(src);
-  console.log(posterMovieIdHash[src]);
   overlay.style.display = "block";
   popup.style.display = "block";
 
@@ -91,8 +89,14 @@ async function popUp(src) {
   movieData = await getMovieDetails(movieId);
   movieVideo = await getMovieVideo(movieId);
 
+  let imgSrc = `https://image.tmdb.org/t/p/original/${movieData.backdrop_path}`;
+  if (!movieData.backdrop_path) {
+    imgSrc =
+      "https://ouikar.com/pub/media/catalog/product/placeholder/default/image_not_available.png";
+  }
+
   popUpContent.innerHTML = `<h2 class="movie-popup-title">${movieData.title}</h2>
-  <img class="movie-backdrop" src="https://image.tmdb.org/t/p/original/${movieData.backdrop_path}" alt="movie backdrop">
+  <img class="movie-backdrop" src=${imgSrc} alt="movie backdrop">
   <p class="movie-popup-info">${movieData.overview}</p>
   <p class="movie-popup-info">Release Date: ${movieData.release_date}</p>
   <p class="movie-popup-info">Runtime: ${movieData.runtime} minutes</p>`;
