@@ -10,11 +10,13 @@ let termElement = document.querySelector("#search-input");
 let resultsElement = document.querySelector("#movies-grid");
 let searchElement = document.querySelector("#clicker");
 let moreResultsButtonElement = document.querySelector("#load-more-movies-btn");
+let closeButtonElement = document.querySelector("#close");
 
 let nowPlayingElement = document.querySelector(".now-playing");
 
 formContentElement.addEventListener("submit", handleFormSubmit);
 moreResultsButtonElement.addEventListener("click", showMore);
+closeButtonElement.addEventListener("click", loadNowPlaying);
 window.addEventListener("load", loadNowPlaying);
 
 async function getResults(term) {
@@ -37,7 +39,7 @@ async function getNowPlaying() {
 
 function displayResults(res) {
   let offset = currentPageNum * LIMIT;
-
+  console.log(res.results);
   setOfMovies = res.results.slice(offset, offset + LIMIT);
 
   setOfMovies.forEach((movie, i) => {
@@ -68,9 +70,10 @@ async function showMore(e) {
 async function handleFormSubmit(e) {
   e.preventDefault();
   currentPageNum = 0;
+  closeButtonElement.classList.remove("hidden");
   // Remove movies from page
   resultsElement.innerHTML = "";
-  nowPlayingElement.innerHTML = " ";
+  nowPlayingElement.classList.add("hidden");
   moreResultsButtonElement.classList.add("hidden");
 
   const searchTerm = e.target.name.value;
@@ -89,9 +92,12 @@ async function handleFormSubmit(e) {
 
 async function loadNowPlaying(e) {
   e.preventDefault();
-
+  currentPageNum = 0;
+  resultsElement.innerHTML = "";
+  nowPlayingElement.classList.remove("hidden");
   const data = await getNowPlaying();
   displayResults(data);
   moreResultsButtonElement.classList.remove("hidden");
+  closeButtonElement.classList.add("hidden");
   currentPageNum = 1;
 }
