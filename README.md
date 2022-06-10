@@ -2,7 +2,7 @@
 
 Submitted by: **Jenny Lee**
 
-Estimated time spent: **5** hours spent in total
+Estimated time spent: **9** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
@@ -45,20 +45,20 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+  The topics discussed in your labs prepare you to complete the assignment. At first, I felt unprepared to create a popup. But after some research, I realized that I already possessed the basic building blocks and JavaScript knowledge needed to complete this stretch feature.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+  If I had more time, I would implement more of the stretch features, such as adding imbedded videos in the movie popups.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+  Regarding my project demo, there was nothing that did not go as planned. I noticed that some of my peers added movie trailers to their popups; this is a feature that I would like to implement in the future.
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- no open-source libraries were used
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+- Shout out to Rebecca for helping me with my bugs!
