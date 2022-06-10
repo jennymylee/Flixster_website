@@ -65,9 +65,14 @@ function displayResults(res) {
       `https://image.tmdb.org/t/p/original/${setOfMovies[i].poster_path}`
     ] = setOfMovies[i].id;
 
+    let imgSrc = `https://image.tmdb.org/t/p/original/${setOfMovies[i].poster_path}`;
+    if (!setOfMovies[i].poster_path) {
+      imgSrc =
+        "https://www.kirkstall.com/wp-content/uploads/2020/04/image-not-available-png-8.png";
+    }
     resultsElement.innerHTML += `
     <div class="movie-card">
-        <img class="movie-poster" onclick="popUp('https://image.tmdb.org/t/p/original/${setOfMovies[i].poster_path}')" src="https://image.tmdb.org/t/p/original/${setOfMovies[i].poster_path}" alt='movie poster'>
+        <img class="movie-poster" onclick="popUp('https://image.tmdb.org/t/p/original/${setOfMovies[i].poster_path}')" src=${imgSrc} alt='movie poster'>
         <p class="movie-votes"><i class="material-icons">star</i>   ${setOfMovies[i].vote_average}</p>
         <p class="movie-title">${setOfMovies[i].title}</p>
     </div>`;
