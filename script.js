@@ -74,7 +74,7 @@ function displayResults(res) {
     resultsElement.innerHTML += `
     <div class="movie-card">
         <img class="movie-poster" onclick="popUp('https://image.tmdb.org/t/p/original/${setOfMovies[i].poster_path}')" src=${imgSrc} alt='movie poster'>
-        <p class="movie-votes"><i class="material-icons">star</i>   ${setOfMovies[i].vote_average}</p>
+        <p class="movie-votes"><i class="material-icons">star</i>   ${setOfMovies[i].vote_average} / 10</p>
         <p class="movie-title">${setOfMovies[i].title}</p>
     </div>`;
   });
