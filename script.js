@@ -89,14 +89,17 @@ async function popUp(src) {
   movieData = await getMovieDetails(movieId);
   movieVideo = await getMovieVideo(movieId);
 
+  console.log(movieVideo);
   let imgSrc = `https://image.tmdb.org/t/p/original/${movieData.backdrop_path}`;
   if (!movieData.backdrop_path) {
     imgSrc =
       "https://ouikar.com/pub/media/catalog/product/placeholder/default/image_not_available.png";
   }
+  console.log(movieVideo);
 
   popUpContent.innerHTML = `<h2 class="movie-popup-title">${movieData.title}</h2>
   <img class="movie-backdrop" src=${imgSrc} alt="movie backdrop">
+  <iframe width="100%" height="500px%" src="https://www.youtube.com/embed/${movieVideo.results[1].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <p class="movie-popup-info">${movieData.overview}</p>
   <p class="movie-popup-info">Release Date: ${movieData.release_date}</p>
   <p class="movie-popup-info">Runtime: ${movieData.runtime} minutes</p>`;
