@@ -50,11 +50,11 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-  If I had more time, I would implement more of the stretch features, such as adding imbedded videos in the movie popups.
+  If I had more time, I would add more styling to the ui and to the buttons on the website.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-  Regarding my project demo, during the first few takes, most of my features worked as intended. While recording, I noticed that I did not set a default image for my backdrop image in the popups. I added this feature before recording my final take. I noticed that some of my peers added movie trailers to their popups; this is a feature that I would like to implement in the future.
+  Regarding my project demo, during the first few takes, most of my features worked as intended. While recording, I noticed that I did not set a default image for my backdrop image in the popups. I added this feature before recording my final take. I noticed that some of my peers added a nav bar to their websites; This is something I would like to implement in the future.
 
 ### Open-source libraries used
 
