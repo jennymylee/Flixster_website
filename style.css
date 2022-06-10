@@ -120,6 +120,7 @@ h1 {
   color: white;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   width: 100%;
+  margin: 3px 0px 0px 0px;
   font-size: 20px;
 }
 
@@ -129,6 +130,7 @@ h1 {
   width: 100%;
   font-weight: bold;
   font-size: large;
+  margin: 0;
 }
 
 .movie-poster {
